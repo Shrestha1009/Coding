@@ -1,0 +1,19 @@
+
+public class Solution {
+
+	public static int lastIndex(int input[], int x) {
+		int ans = index(input, x, input.length-1);
+        return ans;
+	}
+    
+    public static int index(int input[], int x, int lastIndex){
+        if(lastIndex < 0)
+            return -1;
+        
+        if(input[lastIndex] == x)
+            return lastIndex;
+        
+        return index(input, x, lastIndex-1);
+    }
+	
+}
