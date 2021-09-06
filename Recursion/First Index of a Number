@@ -1,0 +1,21 @@
+
+public class Solution {
+
+	public static int firstIndex(int input[], int x) {
+		int ans = index(input, x, 0);
+		return ans;	
+	}
+	
+	public static int index(int array[], int x, int startIndex) {
+		if(startIndex == array.length)
+			return -1;
+		
+		if(array[startIndex] == x)
+			return startIndex;
+		
+		int ans = index(array, x, startIndex+1);
+		return ans;
+	}
+		
+	
+}
